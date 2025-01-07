@@ -16,13 +16,16 @@ export default {
     },
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities, theme }) {
       addUtilities({
         '.red-border': {
           border: '1px solid red',
         },
-      })
-    }
+        '.full-section': {
+          height: `calc(100vh - ${theme('spacing.header-height')})`,
+        },
+      });
+    },
   ],
 }
 

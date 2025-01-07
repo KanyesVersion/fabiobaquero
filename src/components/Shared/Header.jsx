@@ -9,7 +9,7 @@ const Header = () => {
         {/* to add a logo or name */}
         <div className="absolute left-1/2 translate-x-[-50%] lg:left-8 lg:translate-x-0"><Link to="/">Fabio Baquero</Link></div>
         <Burger />
-        <div className="hidden lg:flex absolute right-4 items-center gap-6">
+        <div className="hidden lg:flex absolute right-4 items-center gap-8">
             <Navbar />
             <HeaderLangs />
         </div>

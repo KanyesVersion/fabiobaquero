@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <footer className="py-16 px-20 text-lg bg-gray-900 text-white flex justify-between items-center">
+    <footer className="py-12 px-20 text-lg bg-gray-900 text-white flex justify-between items-center">
         <p><i className="fa fa-copyright" aria-hidden="true"></i> Fabio Baquero 2025</p>
         {/* Social media */}
         <div className="flex flex-col gap-4">

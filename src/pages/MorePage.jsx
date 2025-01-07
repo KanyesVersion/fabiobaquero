@@ -1,4 +1,4 @@
-const Studies = () => {
+const MorePage = () => {
   return (
     <>
         <section></section>
@@ -9,4 +9,4 @@ const Studies = () => {
   )
 }
 
-export default Studies
+export default MorePage

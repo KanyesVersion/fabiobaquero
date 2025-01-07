@@ -1,4 +1,4 @@
-const Discipleship = () => {
+const DiscipleshipPage = () => {
   return (
     <>
         <section>disciple</section>
@@ -9,4 +9,4 @@ const Discipleship = () => {
   )
 }
 
-export default Discipleship
+export default DiscipleshipPage

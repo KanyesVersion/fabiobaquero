@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Studies from "./pages/Studies";
-import Reflections from "./pages/Reflections";
-import Discipleship from "./pages/Discipleship";
-import More from "./pages/More";
-import Footer from "./components/Footer";
+import Header from "./components/Shared/Header";
+import HomePage from "./pages/HomePage";
+import StudiesPage from "./pages/StudiesPage";
+import ReflectionsPage from "./pages/ReflectionsPage";
+import DiscipleshipPage from "./pages/DiscipleshipPage";
+import MorePage from "./pages/MorePage";
+import Footer from "./components/Shared/Footer";
+import RefArt0Page from "./pages/RefArt0Page";
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/studies" element={ <Studies /> } />
-          <Route path="/reflections" element={ <Reflections /> } />
-          <Route path="/discipleship" element={ <Discipleship /> } />
-          <Route path="/more" element={ <More /> } />
+          <Route path="/" element={ <HomePage /> } />
+          <Route path="/studies" element={ <StudiesPage /> } />
+          <Route path="/reflections" element={ <ReflectionsPage /> } />
+          <Route path="/discipleship" element={ <DiscipleshipPage /> } />
+          <Route path="/more" element={ <MorePage /> } />
+          <Route path="/reflections/art-0" element={ <RefArt0Page /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
