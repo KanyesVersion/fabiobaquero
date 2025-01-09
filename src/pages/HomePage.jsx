@@ -6,9 +6,9 @@ const HomePage = () => {
   return (
     <>
         <Hero />
-        <Main>
+        {/* <Main>
           <Section>Hello</Section>
-        </Main>
+        </Main> */}
     </>
   )
 }
