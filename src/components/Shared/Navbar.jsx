@@ -11,7 +11,7 @@ const Navbar = () => {
             <Link to="/studies" className='hover:text-white duration-200'><li>{t('studies')}</li></Link>
             <Link to="/reflections" className='hover:text-white duration-200'><li>{t('reflect')}</li></Link>
             <Link to="/discipleship" className='hover:text-white duration-200'><li>{t('discip')}</li></Link>
-            <Link to="/more" className='hover:text-white duration-200'><li>{t('more')}</li></Link>
+            <Link to="/donate" className='hover:text-white duration-200'><li>{t('donate')}</li></Link>
         </ul>
     </nav>
   )

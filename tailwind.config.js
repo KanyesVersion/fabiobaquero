@@ -21,7 +21,10 @@ export default {
       },
       dev: {
         "red-border": 'border: 1px solid red'
-      }
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [

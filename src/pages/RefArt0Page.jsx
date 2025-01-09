@@ -15,7 +15,7 @@ const RefArt0Page = () => {
             <div className="w-full lg:w-1/2 bg-black h-[300px] lg:h-[500px] lg:min-w-[520px] flex items-end rounded-md overflow-hidden mx-auto">
               <AudioControls src='/visita-audio.m4a' />
             </div>
-            <ReflectCaption>Con esta reflexión, podemos ver que Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita ex iste dignissimos mollitia modi dolor? Maiores officia pariatur dolorem labore aperiam dolor corporis alias, laborum numquam, temporibus fugiat possimus delectus. Incidunt nihil nam labore, non quasi iure mollitia dolore maiores molestias iste eaque ipsam id quam excepturi nesciunt inventore rem?</ReflectCaption>
+            <ReflectCaption>{t('art0Caption')}</ReflectCaption>
           </Section>
         </Main>
     </>

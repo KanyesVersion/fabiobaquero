@@ -7,6 +7,7 @@ import DiscipleshipPage from "./pages/DiscipleshipPage";
 import MorePage from "./pages/MorePage";
 import Footer from "./components/Shared/Footer";
 import RefArt0Page from "./pages/RefArt0Page";
+import DonatePage from "./pages/DonatePage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/reflections" element={ <ReflectionsPage /> } />
           <Route path="/discipleship" element={ <DiscipleshipPage /> } />
           <Route path="/more" element={ <MorePage /> } />
+          <Route path="/donate" element={ <DonatePage /> } />
           <Route path="/reflections/art-0" element={ <RefArt0Page /> } />
         </Routes>
         <Footer />
