@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Hero = () => {
   return (
     <section className="lg:full-section min-h-[680px] lg:min-w-[1364px] p-8 flex gap-8 flex-col lg:flex-row relative
-      bg-[url('./assets/hero-img.jpg')] bg-cover bg-bottom 
+      bg-[url('/assets/hero-img.webp')] bg-cover bg-bottom 
       before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r 
       before:from-[#000c] before:to-transparent
     ">
@@ -29,7 +29,7 @@ const Hero = () => {
           <h2 className="text-2xl lg:text-4xl text-black font-bold animate-slideRight">Estudios Destacados</h2>
         </div>
         <div className="flex-1 w-full p-4 bg-white rounded-lg shadow-md bg-opacity-90 overflow-hidden relative">
-          <h2 className="text-2xl lg:text-4xl text-black font-bold animate-slideRight">Reflexiones</h2>
+          <h2 className="text-2xl lg:text-4xl text-black font-bold animate-slideRight">Reflexiones Recientes</h2>
         </div>
       </div>
     </section>

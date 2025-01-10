@@ -9,7 +9,7 @@ const ReflectLandingSec = () => {
     return (
     <section className="
         py-8 px-0 lg:px-8 lg:py-8 min-h-[600px] lg:full-section
-        bg-[url('./assets/hero-img.jpg')] bg-black bg-opacity-45 bg-blend-darken bg-cover bg-bottom 
+        bg-[url('/assets/hero-img.webp')] bg-black bg-opacity-45 bg-blend-darken bg-cover bg-bottom 
         flex flex-col gap-[2rem]
     ">
         <h1 className="text-white text-4xl md:text-6xl lg:text-7xl text-center font-bold">{t('landingTitle')}</h1>
