@@ -8,6 +8,7 @@ import MorePage from "./pages/MorePage";
 import Footer from "./components/shared/Footer";
 import RefArt0Page from "./pages/RefArt0Page";
 import DonatePage from "./pages/DonatePage";
+import AboutPage from "./pages/AboutPage";
 import ScrollToTop from "./components/shared/utils/ScrollToTop";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/discipleship" element={ <DiscipleshipPage /> } />
           <Route path="/more" element={ <MorePage /> } />
           <Route path="/donate" element={ <DonatePage /> } />
+          <Route path="/about" element={ <AboutPage /> } />
           <Route path="/reflections/art-0" element={ <RefArt0Page /> } />
         </Routes>
         <Footer />

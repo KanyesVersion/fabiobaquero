@@ -15,9 +15,24 @@ export default {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        slideDownSlow: {
+          '0%': { transform: 'translateY(-30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideRight: {
+          '0%': { transform: 'translateX(-100px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         slideDown: 'slideDown 200ms ease-out',
+        slideDownSlow: 'slideDown 600ms ease-out',
+        slideRight: 'slideRight 600ms ease-out',
+        fadeIn: 'fadeIn 600ms ease-out'
       },
       dev: {
         "red-border": 'border: 1px solid red'

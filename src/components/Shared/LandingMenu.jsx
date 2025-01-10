@@ -11,7 +11,7 @@ const LandingMenu = ({ children, title }) => {
         <div className="flex flex-col rounded-md overflow-hidden">
             {children}
         </div>
-        <Link className="text md lg:text-xl lg:hover:pl-2 duration-150 text-blue-800"><i className="fa fa-chevron-right" aria-hidden="true"></i> {t('seeAllArt')}</Link>
+        <Link className="text-md lg:text-xl lg:hover:pl-2 duration-150 text-blue-800"><i className="fa fa-chevron-right" aria-hidden="true"></i> {t('seeAllArt')}</Link>
     </div>
   )
 }
