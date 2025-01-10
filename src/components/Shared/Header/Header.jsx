@@ -9,7 +9,6 @@ const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const toggleMenuVisibility = () => {
     setMenuVisible(!menuVisible);
-    console.log(menuVisible);
   }
   const hideMenu = () => {
     setMenuVisible(false);
@@ -24,7 +23,7 @@ const Header = () => {
             <Navbar />
             <HeaderLangs />
         </div>
-        {menuVisible && <BurgerMenu toggleMenuVisibility={toggleMenuVisibility}/>}
+        {menuVisible && <BurgerMenu toggleMenuVisibility={toggleMenuVisibility} onClickOutside={hideMenu}/>}
     </header>
   )
 }

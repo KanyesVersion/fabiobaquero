@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Shared/Header";
+import Header from "./components/shared/Header/Header";
 import HomePage from "./pages/HomePage";
 import StudiesPage from "./pages/StudiesPage";
 import ReflectionsPage from "./pages/ReflectionsPage";
 import DiscipleshipPage from "./pages/DiscipleshipPage";
 import MorePage from "./pages/MorePage";
-import Footer from "./components/Shared/Footer";
+import Footer from "./components/shared/Footer";
 import RefArt0Page from "./pages/RefArt0Page";
 import DonatePage from "./pages/DonatePage";
+import ScrollToTop from "./components/shared/utils/ScrollToTop";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/reflections/art-0" element={ <RefArt0Page /> } />
         </Routes>
         <Footer />
+        <ScrollToTop />
       </BrowserRouter>
       {/* structure the site according to content, pending */}
       {/* audio recordings of studies, text (reflections and "studies with history and analysis") (discipleship), short reels */}
