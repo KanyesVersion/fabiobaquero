@@ -1,13 +1,14 @@
 import { changeLanguage } from "i18next";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next"
 
- const HeaderLangs = () => {
+const HeaderLangs = () => {
   const { t, i18n } = useTranslation('header');
-  const [lang, setLang] = useState('es');
+  const lang = useRef('es');
+
   function toggleLang() {
-    if (lang === 'es') {setLang('en');} else {setLang('es');}
-    i18n.changeLanguage(lang);
+    lang.current = lang.current === 'es' ? 'en' : 'es';
+    changeLanguage(lang.current);
   }
 
   return (
