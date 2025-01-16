@@ -25,10 +25,10 @@ const Hero = () => {
         </Link>
       </div>
       <div className="lg:h-full flex-1 flex flex-col gap-8">
-        <div className="flex-1 w-full p-4 bg-white rounded-lg shadow-md bg-opacity-90 overflow-hidden relative">
+        <div className="flex-1 w-full p-4 lg:p-6 bg-white rounded-lg shadow-md bg-opacity-90 overflow-hidden relative">
           <h2 className="text-2xl lg:text-4xl text-black font-bold animate-slideRight">Estudios Destacados</h2>
         </div>
-        <div className="flex-1 w-full p-4 bg-white rounded-lg shadow-md bg-opacity-90 overflow-hidden relative">
+        <div className="flex-1 w-full p-4 lg:p-6 bg-white rounded-lg shadow-md bg-opacity-90 overflow-hidden relative">
           <h2 className="text-2xl lg:text-4xl text-black font-bold animate-slideRight">Reflexiones Recientes</h2>
         </div>
       </div>
