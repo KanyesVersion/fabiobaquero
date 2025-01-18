@@ -6,11 +6,14 @@ const HeaderLangs = ({ toggleLang }) => {
   const { t } = useTranslation('header');
 
   return (
-    <div className="bg-redbrown1 text-beige1 flex items-center gap-8 rounded-md py-4 px-4">
+    <div className="
+    bg-redbrown1 text-beige1 flex items-center
+      gap-4 rounded-md py-4 px-4 hover:text-white cursor-pointer
+    " onClick={toggleLang}>
         <div className="flex flex-col text-[1.25rem]">
-            <span className="hover:text-white cursor-pointer" onClick={toggleLang}>{t('headLangName')}</span>
+            <span>{t('headLangName')}</span>
         </div>
-        <i className="fa fa-language" aria-hidden="true"></i>
+        <img src={t('flagUrl')} className="w-8 rounded-[50%]"/>
     </div>
   )
 }
