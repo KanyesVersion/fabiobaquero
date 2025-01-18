@@ -2,14 +2,8 @@ import { changeLanguage } from "i18next";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next"
 
-const HeaderLangs = () => {
-  const { t, i18n } = useTranslation('header');
-  const lang = useRef('es');
-
-  function toggleLang() {
-    lang.current = lang.current === 'es' ? 'en' : 'es';
-    changeLanguage(lang.current);
-  }
+const HeaderLangs = ({ toggleLang }) => {
+  const { t } = useTranslation('header');
 
   return (
     <div className="bg-redbrown1 text-beige1 flex items-center gap-8 rounded-md py-4 px-4">
