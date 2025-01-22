@@ -3,13 +3,12 @@ import Header from "./components/shared/Header/Header";
 import HomePage from "./pages/HomePage";
 import StudiesPage from "./pages/StudiesPage";
 import ReflectionsPage from "./pages/ReflectionsPage";
-import DiscipleshipPage from "./pages/DiscipleshipPage";
 import MorePage from "./pages/MorePage";
 import Footer from "./components/shared/Footer";
-import RefArt0Page from "./pages/RefArt0Page";
 import DonatePage from "./pages/DonatePage";
 import AboutPage from "./pages/AboutPage";
-import ScrollToTop from "./components/shared/utils/ScrollToTop";
+import Article from "./components/shared/Article";
+import ScrollToTop from "./components/shared/utils/ScrollToTop"
 
 function App() {
   return (
@@ -20,11 +19,10 @@ function App() {
           <Route path="/" element={ <HomePage /> } />
           <Route path="/studies" element={ <StudiesPage /> } />
           <Route path="/reflections" element={ <ReflectionsPage /> } />
-          <Route path="/discipleship" element={ <DiscipleshipPage /> } />
           <Route path="/more" element={ <MorePage /> } />
           <Route path="/donate" element={ <DonatePage /> } />
           <Route path="/about" element={ <AboutPage /> } />
-          <Route path="/reflections/art-0" element={ <RefArt0Page /> } />
+          <Route path="/articles/:category/:slug" element={ <Article /> } />
         </Routes>
         <Footer />
         <ScrollToTop />

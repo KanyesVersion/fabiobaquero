@@ -7,5 +7,8 @@ export default defineConfig({
   server: {
     host: true, // Ensures the server is accessible from other devices
     port: 5173, // Use your desired port (default for Vite is 5173)
+    proxy: {
+      '/api': 'http://localhost:5001'
+    },
   },
 });

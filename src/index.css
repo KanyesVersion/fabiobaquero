@@ -11,10 +11,16 @@ a {
 }
 
 body {
-    @apply bg-slate-300;
+    @apply bg-beige1;
 }
 
 body::-webkit-scrollbar {
     width: 0;
     height: 0;
+}
+
+@layer utilities {
+    .content-land-title {
+        @apply text-white text-4xl md:text-6xl lg:text-7xl text-center font-bold;
+    }
 }

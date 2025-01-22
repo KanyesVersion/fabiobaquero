@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next"
-import Hero from "../components/Home/Hero"
-import Main from "../components/shared/Main"
-import Section from "../components/shared/Section"
+import { useTranslation } from "react-i18next";
+import Hero from "../components/Home/Hero";
+import Main from "../components/shared/Main";
+import AudioControls from "../components/shared/AudioControls";
 
 const DonatePage = () => {
   const { t } = useTranslation('donate');
