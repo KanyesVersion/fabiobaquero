@@ -31,8 +31,8 @@ const StudiesPage = () => {
     <>
       <ContentLandingMain>
         <h1 className="content-land-title">{t('studiesTitle')}</h1>
-        <div className="flex w-full flex-1 flex-col lg:flex-row gap-12 lg:gap-0 lg:min-w-[1068px]">
-            <div className="lg:p-4 lg:flex-1">
+        <div className="flex w-full flex-1 flex-col lg:flex-row gap-12 lg:gap-0 lg:min-w-[1200px]">
+            <div className="flex justify-center items-center lg:p-8 lg:flex-1">
                 <ContentLandingMenu title={t('mostPopular')}>
                   {popular5Data ? popular5Data.map((art, index) => {
                     const dateArr = getDateArr(art.date);
@@ -49,7 +49,10 @@ const StudiesPage = () => {
                   }) : <p className="self-center text-2xl lg:text-4xl">{t('loadingArticles')}</p>}
                 </ContentLandingMenu>
             </div>
-            <div className="lg:p-4 flex-1 lg:border-l-[2px] border-gray-400 border-opacity-50">
+            <div className="
+              flex justify-center items-center lg:p-8 flex-1 
+              lg:border-l-[1px] border-gray-400 border-opacity-50"
+            >
                 <ContentLandingMenu title={t('latestArticles')}>
                   {popular5Data ? popular5Data.map((art, index) => {
                       const dateArr = getDateArr(art.date);
@@ -60,7 +63,7 @@ const StudiesPage = () => {
                           onClick={() => menuItemClick(art.category, art.slug)}
                           title={t(art.slug)}
                           date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]}`}
-                          views={art.views}
+                          views={null}
                         />
                       )
                     }) : <p className="self-center text-2xl lg:text-4xl">{t('loadingArticles')}</p>}
