@@ -9,7 +9,7 @@ import DonatePage from "./pages/DonatePage";
 import AboutPage from "./pages/AboutPage";
 import Article from "./components/shared/Article";
 import ScrollToTop from "./components/shared/utils/ScrollToTop"
-import StudiesAllPage from "./pages/StudiesAllPage";
+import AllListPage from "./pages/AllListPage";
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
           <Route path="/more" element={ <MorePage /> } />
           <Route path="/donate" element={ <DonatePage /> } />
           <Route path="/about" element={ <AboutPage /> } />
+          <Route path="/:category/all" element={ <AllListPage /> } />
           <Route path="/:category/:slug" element={ <Article /> } />
-          <Route path="/studies/all" element={ <StudiesAllPage /> } />
         </Routes>
         <Footer />
         <ScrollToTop />

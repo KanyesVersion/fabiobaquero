@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
-const ContentLandingMenu = ({ children, title, category }) => {
+const ContentLandingMenu = ({ children, title, category, queryParams }) => {
   const { t } = useTranslation('articles-meta');
 
   return (
@@ -15,8 +15,11 @@ const ContentLandingMenu = ({ children, title, category }) => {
             {children}
         </div>
         <Link
-          to={`/${category}/all`}
-          className="flex items-center self-center text-xl lg:text-xl lg:hover:pl-2 duration-150 text-blue-600"
+          to={{
+            pathname: `/${category}/all`,
+            search: queryParams
+          }}
+          className="flex items-center self-center text-md lg:text-xl lg:hover:pl-2 duration-150 text-blue-600"
         >
           {t('seeAllArt')} <i className="fa fa-chevron-right ml-2" aria-hidden="true"></i>
         </Link>

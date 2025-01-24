@@ -35,7 +35,7 @@ export default {
         fadeIn: 'fadeIn 600ms ease-out'
       },
       dev: {
-        "red-border": 'border: 1px solid red'
+        "red-border": 'border: 1px solid red',
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],

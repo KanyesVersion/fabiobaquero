@@ -1,6 +1,9 @@
 {
     "written": "Written",
     "sortBy": "Sort by",
+    "mostPopular": "Most popular",
+    "latest": "Latest",
+    "alphabetical": "Alphabetical",
     "page": "Page",
     "of": "of"
 }

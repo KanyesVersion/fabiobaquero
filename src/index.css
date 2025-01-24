@@ -21,6 +21,6 @@ body::-webkit-scrollbar {
 
 @layer utilities {
     .content-land-title {
-        @apply text-white text-3xl md:text-6xl lg:text-7xl text-center font-bold;
+        @apply text-white text-4xl md:text-6xl lg:text-8xl text-center font-thin;
     }
 }

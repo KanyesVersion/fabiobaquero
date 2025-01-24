@@ -33,7 +33,7 @@ const StudiesPage = () => {
         <h1 className="content-land-title">{t('studiesTitle')}</h1>
         <div className="flex w-full flex-1 flex-col lg:flex-row gap-12 lg:gap-0 lg:min-w-[1200px]">
             <div className="flex justify-center items-center lg:p-8 lg:flex-1">
-                <ContentLandingMenu title={t('mostPopular')} category='studies'>
+                <ContentLandingMenu title={t('mostPopular')} category='studies' queryParams={'?sort=popular&order=desc'}>
                   {popular5Data ? popular5Data.map((art, index) => {
                     const dateArr = getDateArr(art.date);
 
@@ -41,19 +41,19 @@ const StudiesPage = () => {
                       <ContentLandingArt
                         key={index}
                         onClick={() => menuItemClick(art.category, art.slug)}
-                        title={t(art.slug)}
-                        date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]}`}
+                        title={t('articles:' + art.slug)}
+                        date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]} ${t('date:poky')}`}
                         views={null}
                       />
                     )
-                  }) : <p className="self-center text-2xl lg:text-4xl">{t('loadingArticles')}</p>}
+                  }) : <p className="self-center text-2xl lg:text-3xl">{t('loadingArticles')}</p>}
                 </ContentLandingMenu>
             </div>
             <div className="
               flex justify-center items-center lg:p-8 flex-1 
               lg:border-l-[1px] border-gray-400 border-opacity-50"
             >
-                <ContentLandingMenu title={t('latestArticles')} category='studies'>
+                <ContentLandingMenu title={t('latestArticles')} category='studies' queryParams={'?sort=date&order=desc'}>
                   {popular5Data ? popular5Data.map((art, index) => {
                       const dateArr = getDateArr(art.date);
 
@@ -61,12 +61,12 @@ const StudiesPage = () => {
                         <ContentLandingArt
                           key={index}
                           onClick={() => menuItemClick(art.category, art.slug)}
-                          title={t(art.slug)}
-                          date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]}`}
+                          title={t('articles:' + art.slug)}
+                          date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]} ${t('date:poky')}`}
                           views={null}
                         />
                       )
-                    }) : <p className="self-center text-2xl lg:text-4xl">{t('loadingArticles')}</p>}
+                    }) : <p className="self-center text-2xl lg:text-3xl">{t('loadingArticles')}</p>}
                 </ContentLandingMenu>
             </div>
         </div>
