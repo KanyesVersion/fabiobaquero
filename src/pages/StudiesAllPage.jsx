@@ -5,7 +5,7 @@ import apiBaseUrl from '../config';
 import { getDateArr } from '../utils/getDateArr';
 
 const StudiesAllPage = () => {
-    const { t } = useTranslation(['articles-meta', 'articles', 'common']);
+    const { t } = useTranslation(['articles-meta', 'articles', 'common', 'date']);
     const [allArticles, setAllArticles] = useState(null);
 
     const menuItemClick = (category, slug) => {
@@ -57,7 +57,7 @@ const StudiesAllPage = () => {
                             <AllListArt
                                 key={index}
                                 onClick={() => menuItemClick(art.category, art.slug)}
-                                title={t(art.slug)}
+                                title={t('articles:' + art.slug)}
                                 date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]}`}
                             />
                             )
