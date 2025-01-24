@@ -1,4 +1,6 @@
 {
-    "seeAllArt": "Todos los artículos",
-    "written": "Escrito"
+    "written": "Escrito",
+    "sortBy": "Ordenar por",
+    "page": "Página",
+    "of": "de"
 }

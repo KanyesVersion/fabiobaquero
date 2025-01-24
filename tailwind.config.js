@@ -30,7 +30,7 @@ export default {
       },
       animation: {
         slideDown: 'slideDown 200ms ease-out',
-        slideDownSlow: 'slideDown 600ms ease-out',
+        slideDownSlow: 'slideDown 800ms ease-out',
         slideRight: 'slideRight 600ms ease-out',
         fadeIn: 'fadeIn 600ms ease-out'
       },

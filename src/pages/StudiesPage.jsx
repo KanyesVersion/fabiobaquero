@@ -8,12 +8,12 @@ import { getDateArr } from "../utils/getDateArr";
 import apiBaseUrl from "../config"
 
 const StudiesPage = () => {
-  const { t } = useTranslation(['articles', 'date']);
+  const { t } = useTranslation(['articles-meta', 'articles', 'date']);
   const navigate = useNavigate();
   const [popular5Data, setPopular5Data] = useState(null);
 
   const menuItemClick = (category, slug) => {
-    navigate(`/articles/${category}/${slug}`);
+    navigate(`/${category}/${slug}`);
   }
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const StudiesPage = () => {
         <h1 className="content-land-title">{t('studiesTitle')}</h1>
         <div className="flex w-full flex-1 flex-col lg:flex-row gap-12 lg:gap-0 lg:min-w-[1200px]">
             <div className="flex justify-center items-center lg:p-8 lg:flex-1">
-                <ContentLandingMenu title={t('mostPopular')}>
+                <ContentLandingMenu title={t('mostPopular')} category='studies'>
                   {popular5Data ? popular5Data.map((art, index) => {
                     const dateArr = getDateArr(art.date);
 
@@ -53,7 +53,7 @@ const StudiesPage = () => {
               flex justify-center items-center lg:p-8 flex-1 
               lg:border-l-[1px] border-gray-400 border-opacity-50"
             >
-                <ContentLandingMenu title={t('latestArticles')}>
+                <ContentLandingMenu title={t('latestArticles')} category='studies'>
                   {popular5Data ? popular5Data.map((art, index) => {
                       const dateArr = getDateArr(art.date);
 

@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 import { getDateArr } from "../utils/getDateArr";
 import apiBaseUrl from "../config"
 
-const StudiesPage = () => {
-  const { t } = useTranslation(['articles', 'date']);
+const ReflectionsPage = () => {
+  const { t } = useTranslation(['articles-meta', 'articles', 'date']);
   const navigate = useNavigate();
   const [popular5Data, setPopular5Data] = useState(null);
 
   const menuItemClick = (category, slug) => {
-    navigate(`/articles/${category}/${slug}`);
+    navigate(`/${category}/${slug}`);
   }
 
   useEffect(() => {
@@ -41,9 +41,9 @@ const StudiesPage = () => {
                       <ContentLandingArt
                         key={index}
                         onClick={() => menuItemClick(art.category, art.slug)}
-                        title={t(art.slug)}
+                        title={t('articles:' + art.slug)}
                         date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]}`}
-                        views={null}
+                        views={art.views}
                       />
                     )
                   }) : <p className="self-center text-2xl lg:text-4xl">{t('loadingArticles')}</p>}
@@ -61,9 +61,9 @@ const StudiesPage = () => {
                         <ContentLandingArt
                           key={index}
                           onClick={() => menuItemClick(art.category, art.slug)}
-                          title={t(art.slug)}
+                          title={t('articles:' + art.slug)}
                           date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]}`}
-                          views={null}
+                          views={art.views}
                         />
                       )
                     }) : <p className="self-center text-2xl lg:text-4xl">{t('loadingArticles')}</p>}
@@ -75,4 +75,4 @@ const StudiesPage = () => {
   )
 }
 
-export default StudiesPage
+export default ReflectionsPage

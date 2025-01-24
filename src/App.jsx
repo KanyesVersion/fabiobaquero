@@ -9,6 +9,7 @@ import DonatePage from "./pages/DonatePage";
 import AboutPage from "./pages/AboutPage";
 import Article from "./components/shared/Article";
 import ScrollToTop from "./components/shared/utils/ScrollToTop"
+import StudiesAllPage from "./pages/StudiesAllPage";
 
 function App() {
   return (
@@ -22,14 +23,12 @@ function App() {
           <Route path="/more" element={ <MorePage /> } />
           <Route path="/donate" element={ <DonatePage /> } />
           <Route path="/about" element={ <AboutPage /> } />
-          <Route path="/articles/:category/:slug" element={ <Article /> } />
+          <Route path="/:category/:slug" element={ <Article /> } />
+          <Route path="/studies/all" element={ <StudiesAllPage /> } />
         </Routes>
         <Footer />
         <ScrollToTop />
       </BrowserRouter>
-      {/* structure the site according to content, pending */}
-      {/* audio recordings of studies, text (reflections and "studies with history and analysis") (discipleship), short reels */}
-      {/* beige, reddish brown */}
     </>
   )
 }

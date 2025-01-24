@@ -1,11 +1,11 @@
 {
     "enName": "English",
     "esName": "Spanish",
-    "headLangName": "Español",
-    "flagUrl": "/assets/es.webp",
+    "ukName": "Ukrainian",
+    "headLangName": "Українська",
+    "flagUrl": "/assets/uk.png",
     "studies": "Studies",
     "reflections": "Reflections",
-    "discip": "Discipleship",
     "more": "More",
     "donate": "Donate"
 }

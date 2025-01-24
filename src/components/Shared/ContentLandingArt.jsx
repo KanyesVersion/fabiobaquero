@@ -6,7 +6,7 @@ const ContentLandingArt = ({ onClick, title, date, views }) => {
   return (
     <div onClick={onClick} className="
       w-full py-1 pl-2 pr-1 lg:p-3 lg:hover:pl-4 lg:hover:pr-2
-    bg-[#e9dbcf] lg:hover:bg-[#f2e6dc]
+    bg-beige1 lg:hover:bg-[#f2e6dc]
     text-white flex justify-between cursor-pointer relative
       duration-100 border-b border-[#3004] last:border-none"
     >

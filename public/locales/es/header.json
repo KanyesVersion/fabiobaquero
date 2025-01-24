@@ -1,11 +1,11 @@
 {
     "enName": "Inglés",
     "esName": "Español",
+    "ukName": "Ucraniano",
     "headLangName": "English",
     "flagUrl": "/assets/gb.webp",
     "studies": "Estudios",
     "reflections": "Reflexiones",
-    "discip": "Discipulado",
     "more": "Más",
     "donate": "Donaciones"
 }

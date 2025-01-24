@@ -3,7 +3,7 @@ import BurgerMenuItem from "./BurgerMenuItem"
 import { useEffect, useRef, useState } from "react";
 import BurgerMenuLang from "./BurgerMenuLang";
 
-const BurgerMenu = ({ toggleMenuVisibility, onClickOutside, toggleLang }) => {
+const BurgerMenu = ({ toggleMenuVisibility, onClickOutside, cycleLangs }) => {
     const { t } = useTranslation('header');
     const ref = useRef();
     const [isMounted, setIsMounted] = useState(false);
@@ -31,7 +31,7 @@ const BurgerMenu = ({ toggleMenuVisibility, onClickOutside, toggleLang }) => {
         <BurgerMenuItem to='/studies' toggleMenuVisibility={toggleMenuVisibility}>{t('studies')}</BurgerMenuItem>
         <BurgerMenuItem to='/reflections' toggleMenuVisibility={toggleMenuVisibility}>{t('reflections')}</BurgerMenuItem>
         <BurgerMenuItem to='/donate' toggleMenuVisibility={toggleMenuVisibility}>{t('donate')}</BurgerMenuItem>
-        <BurgerMenuLang toggleLang={toggleLang}/>
+        <BurgerMenuLang cycleLangs={cycleLangs}/>
     </div>
     )
 }

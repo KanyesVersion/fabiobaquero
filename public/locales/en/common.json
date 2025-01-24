@@ -1,4 +1,6 @@
 {
-    "seeAllArt": "See all articles",
-    "written": "Written"
+    "written": "Written",
+    "sortBy": "Sort by",
+    "page": "Page",
+    "of": "of"
 }
