@@ -11,10 +11,11 @@ const AllListSortItem = ({ label, purposeSort, paramSort, paramOrder, changeSort
     >
         {label + ' '}
         <i
-            className={`
-                fa fa-chevron-down text-xs lg:text-sm
-                rotate-${paramOrder === 'desc' ? '0' : '180'}
-                ${paramSort === purposeSort ? '' : ' hidden'}`}
+            className="fa fa-chevron-down text-xs lg:text-sm"
+            style={{
+                transform: paramOrder === 'desc' ? 'rotate(0deg)' : 'rotate(180deg)',
+                display: purposeSort === paramSort ? 'inline-block' : 'none'
+            }}
             aria-hidden="true"
         ></i>
     </span>

@@ -3,7 +3,7 @@ import AllListArt from '../components/shared/AllListArt';
 import { useTranslation } from 'react-i18next';
 import apiBaseUrl from '../config';
 import { getDateArr } from '../utils/getDateArr';
-import { useLocation, useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import AllListSortItem from '../components/shared/AllListSortItem';
 import { numberCallback, dateCallback, alphabeticalCallback, getCallbackIndex } from '../utils/sortCallbacks';
 
@@ -11,6 +11,7 @@ const AllListPage = () => {
     const { t } = useTranslation(['articles-meta', 'articles', 'common', 'date']);
     const [allArticles, setAllArticles] = useState(null);
     const { category } = useParams();
+    const navigate = useNavigate();
 
     const menuItemClick = (category, slug) => {
         navigate(`/${category}/${slug}`);

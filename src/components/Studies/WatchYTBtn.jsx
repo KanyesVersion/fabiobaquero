@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 
 const WatchYTBtn = ({ videoId }) => {
-    const { t } = useTranslation('articles');
+    const { t } = useTranslation('articles-meta');
 
     return (
     <a

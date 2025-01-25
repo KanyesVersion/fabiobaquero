@@ -15,7 +15,7 @@ const Hero = () => {
       ">
         <h1 className="
           animate-slideDownSlow text-white text-4xl lg:text-7xl 
-          text-center lg:text-center lg:leading-snug font-bold
+          text-center lg:text-center lg:leading-snug font-thin
         ">
           {t('welcome')}<br /> {t('greeting')}
         </h1>

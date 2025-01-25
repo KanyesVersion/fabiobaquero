@@ -20,7 +20,7 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideRight: {
-          '0%': { transform: 'translateX(-80px)', opacity: '0' },
+          '0%': { transform: 'translateX(-50px)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         fadeIn: {
