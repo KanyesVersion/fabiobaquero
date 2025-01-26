@@ -5,7 +5,7 @@ import ContentLandingArt from "../components/shared/ContentLandingArt";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getDateArr } from "../utils/getDateArr";
-import apiBaseUrl from "../config"
+const API_URL = import.meta.env.VITE_API_URL;
 
 const StudiesPage = () => {
   const { t } = useTranslation(['articles-meta', 'articles', 'date']);
@@ -17,7 +17,7 @@ const StudiesPage = () => {
   }
 
   useEffect(() => {
-    fetch(`${apiBaseUrl}/api/articles/studies/top-5-viewed`)
+    fetch(`${API_URL}/api/articles/studies/top-5-viewed`)
     .then(res => res.json())
     .then(data => {
       setPopular5Data(data);

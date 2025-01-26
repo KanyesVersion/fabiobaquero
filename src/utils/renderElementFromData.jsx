@@ -6,9 +6,11 @@ const renderElementFromData = (data, key, currentLanguage) => {
     const localizedChildren = !Array.isArray(children) && children !== null ? children[currentLanguage] : children;
     const typeOrComponent = componentLookup[type] || type;
 
+    props.key = key;
+
     if (!Array.isArray(localizedChildren)) {
-        return <React.Fragment key={key}>
-            {React.createElement(typeOrComponent, { ...props }, localizedChildren)}
+        return <React.Fragment>
+            {React.createElement(typeOrComponent, props, localizedChildren)}
         </React.Fragment> ;
     } else {
         return React.createElement(

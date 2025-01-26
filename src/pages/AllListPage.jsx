@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import AllListArt from '../components/shared/AllListArt';
 import { useTranslation } from 'react-i18next';
-import apiBaseUrl from '../config';
 import { getDateArr } from '../utils/getDateArr';
 import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import AllListSortItem from '../components/shared/AllListSortItem';
 import { numberCallback, dateCallback, alphabeticalCallback, getCallbackIndex } from '../utils/sortCallbacks';
+import CoverTitle from '../components/shared/CoverTitle';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const AllListPage = () => {
     const { t } = useTranslation(['articles-meta', 'articles', 'common', 'date']);
@@ -18,7 +19,7 @@ const AllListPage = () => {
     }
 
     useEffect(() => {
-        fetch(`${apiBaseUrl}/api/articles/${category}/all`)
+        fetch(`${API_URL}/api/articles/${category}/all`)
         .then(res => res.json())
         .then(data => {
           setAllArticles(data);
@@ -52,17 +53,12 @@ const AllListPage = () => {
         >
             {/* CHECK use the actual image */}
             {/* CHECK try animations or a presentation */}
-            <div className="
-                w-full px-4 py-14 lg:px-8 lg:py-28 relative
-                before:content-[''] before:absolute before:inset-0
-                before:bg-gradient-to-r before:from-[#0007] before:to-tranparent
-                bg-[url(/assets/studies-cover.jpg)] bg-cover bg-left"
+            <CoverTitle
+                imgUrl={`/assets/${category === 'studies' ? 'studies-cover' : 'reflections-cover'}.webp`}
+                positionY={category === 'studies' ? '50%' : '10%'}    
             >
-                <h2 className='
-                    text-5xl lg:text-7xl font-thin text-white
-                    relative animate-slideDownSlow'
-                >{t(category + 'Title')}</h2>
-            </div>
+                {t(category + 'Title')}
+            </CoverTitle>
             {/* This is the "main" section after the cover image */}
             <div className="p-2 lg:p-8 flex-1 flex flex-col lg:flex-row lg:items-stretch gap-20 lg:gap-8">
                 <div className="w-full lg:w-[60%] pb-4 flex flex-col justify-between gap-8">

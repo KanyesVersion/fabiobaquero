@@ -20,7 +20,7 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideRight: {
-          '0%': { transform: 'translateX(-50px)', opacity: '0' },
+          '0%': { transform: 'translateX(-32px)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         fadeIn: {
@@ -31,11 +31,12 @@ export default {
       animation: {
         slideDown: 'slideDown 200ms ease-out',
         slideDownSlow: 'slideDown 800ms ease-out',
-        slideRight: 'slideRight 600ms ease-out',
-        fadeIn: 'fadeIn 600ms ease-out'
+        slideRight: 'slideRight 800ms ease-out',
+        fadeIn: 'fadeIn 800ms ease-out'
       },
       dev: {
         "red-border": 'border: 1px solid red',
+        "blue-border": 'border: 1px solid blue'
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],

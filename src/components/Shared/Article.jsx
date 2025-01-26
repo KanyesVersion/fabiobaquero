@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import renderElementFromData from "../../utils/renderElementFromData";
 import { useTranslation } from 'react-i18next';
 import { useParams } from "react-router-dom";
-import apiBaseUrl from "../../config";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Article = () => {
     const { category, slug } = useParams();
@@ -11,7 +11,7 @@ const Article = () => {
     
     useEffect(() => {
         // Fetch the article content from the backend
-        fetch(`${apiBaseUrl}/api/articles/${category}/${slug}`)
+        fetch(`${API_URL}/api/articles/${category}/${slug}`)
         .then(res => {
             console.log(res.status);
             return res.json();
@@ -25,9 +25,9 @@ const Article = () => {
     }, [slug]);
 
     return (
-    <main className="w-full p-6 bg-[#f9f9f8] flex flex-col gap-6 md:gap-8">
-        {content ? content.map(
-            (elementData, index) => renderElementFromData(elementData, index, i18n.language)
+    <main className="w-full bg-[#f9f9f8] flex flex-col gap-6 md:gap-8">
+        {content ? content.map((elementData, index) => 
+            renderElementFromData(elementData, index, i18n.language)
         ) : 'Loading...'}
     </main>
     )
