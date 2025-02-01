@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
+import PhoneLink from "./PhoneLink";
 
 const Footer = () => {
   const { t } = useTranslation('common');
@@ -10,10 +11,10 @@ const Footer = () => {
       bg-[#001324] text-sky-300
       flex flex-col lg:flex-row justify-between lg:justify-around lg:items-center gap-12 lg:gap-0"
     >
-        <p className="text-sm lg:text-xl self-center"><i className="fa fa-copyright" aria-hidden="true"></i> Fabio Baquero 2025</p>
+        <p className="text-sm lg:text-xl self-center" style={{ fontFamily: 'Nova Square, serif' }}>FABIO BAQUERO</p>
         <div className="flex flex-col gap-2 lg:gap-8 text-md lg:text-xl">
           <p className="text-[#def9]">{t('phone')}:</p>
-          <p>+593 96 381 1030</p>
+          <PhoneLink phoneNumber={'+593 96 381 1030'} />
         </div>
         <div className="flex flex-col gap-2 lg:gap-8 text-md lg:text-xl">
           <p className="text-[#def9]">E-mail:</p>

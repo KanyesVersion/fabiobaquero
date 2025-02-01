@@ -11,6 +11,7 @@ const StudiesPage = () => {
   const { t } = useTranslation(['articles-meta', 'articles', 'date']);
   const navigate = useNavigate();
   const [popular5Data, setPopular5Data] = useState(null);
+  const [latest5Data, setLatest5Data] = useState(null);
 
   const menuItemClick = (category, slug) => {
     navigate(`/${category}/${slug}`);
@@ -21,6 +22,15 @@ const StudiesPage = () => {
     .then(res => res.json())
     .then(data => {
       setPopular5Data(data);
+    })
+    .catch(err => {
+      console.error('There was an error retrieving resources.', err)
+    });
+
+    fetch(`${API_URL}/api/articles/studies/latest-5`)
+    .then(res => res.json())
+    .then(data => {
+      setLatest5Data(data);
     })
     .catch(err => {
       console.error('There was an error retrieving resources.', err)
@@ -54,7 +64,7 @@ const StudiesPage = () => {
               lg:border-l-[1px] border-gray-400 border-opacity-50"
             >
                 <ContentLandingMenu title={t('latestArticles')} category='studies' queryParams={'?sort=date&order=desc'}>
-                  {popular5Data ? popular5Data.map((art, index) => {
+                  {latest5Data ? latest5Data.map((art, index) => {
                       const dateArr = getDateArr(art.date);
 
                       return (

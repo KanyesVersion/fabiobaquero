@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 import BurgerMenuItem from "./BurgerMenuItem"
 import { useEffect, useRef, useState } from "react";
-import BurgerMenuLang from "./BurgerMenuLang";
+import BurgerMenuLangs from "./BurgerMenuLangs";
 
 const BurgerMenu = ({ toggleMenuVisibility, onClickOutside, cycleLangs }) => {
     const { t } = useTranslation('header');
@@ -27,11 +27,11 @@ const BurgerMenu = ({ toggleMenuVisibility, onClickOutside, cycleLangs }) => {
     }, [isMounted, onClickOutside]);
 
     return (
-    <div ref={ref} className="w-screen absolute top-[100%] left-0 flex flex-col shadow-lg animate-slideDown">
+    <div ref={ref} className="w-full absolute top-[100%] left-0 flex flex-col shadow-lg animate-slideDown">
         <BurgerMenuItem to='/studies' toggleMenuVisibility={toggleMenuVisibility}>{t('studies')}</BurgerMenuItem>
         <BurgerMenuItem to='/reflections' toggleMenuVisibility={toggleMenuVisibility}>{t('reflections')}</BurgerMenuItem>
         <BurgerMenuItem to='/donate' toggleMenuVisibility={toggleMenuVisibility}>{t('donate')}</BurgerMenuItem>
-        <BurgerMenuLang cycleLangs={cycleLangs}/>
+        <BurgerMenuLangs cycleLangs={cycleLangs}/>
     </div>
     )
 }

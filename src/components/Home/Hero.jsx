@@ -36,13 +36,13 @@ const Hero = () => {
       </div>
       <div className="lg:h-full flex-1 flex flex-col gap-8">
         <LatestCard
-          bgColor='#20202aa8'
+          bgColor='#fff7'
           title={t('latestStudies')}
-          titleColor='white'
+          titleColor='black'
           big={{
-            title: t('articles:widow-of-nain'),
-            url: '/studies/widow-of-nain',
-            img: '/assets/widow-of-nain.webp'
+            title: t('articles:faith-of-centurion'),
+            url: '/studies/faith-of-centurion',
+            img: '/assets/faith-of-centurion.webp'
           }}
           small={{
             title: t('articles:widow-of-nain'),
@@ -51,7 +51,7 @@ const Hero = () => {
           }}
         />
         <LatestCard
-          bgColor='#ffffff85'
+          bgColor='#fff7'
           title={t('latestReflections')}
           titleColor='black'
           big={{

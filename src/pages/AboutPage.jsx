@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next"
+
 const AboutPage = () => {
+  const { t } = useTranslation('about');
+
   return (
     <main className="p-4 lg:p-8 bg-white lg:full-section lg:min-w-[1200px] grid place-content-center">
         <div className="w-full lg:w-2/3 text-lg lg:text-2xl lg:text-justify mx-auto">
@@ -7,7 +11,7 @@ const AboutPage = () => {
           ">
             <img src="/assets/profilepic.webp" className="w-full scale-[.6]"/>
           </div>
-          <p>¡Hola! Soy Fabio Baquero. Tengo el privilegio de compartirles un poco sobre mí: estudié teología en el Instituto Bíblico Palabra de Vida (Argentina). Fui Director Nacional de BSF (Bible Study Fellowship) en Ecuador. Fui profesor en el Instituto Bíblico Misionero Ecuatoriano. Estoy aquí porque quiero seguir haciendo lo que me apasiona, compartir la Palabra De Dios y el Evangelio de la Gracia.</p>
+          <p>{t('longAboutMe')}</p>
         </div>
     </main>
   )

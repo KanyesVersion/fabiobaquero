@@ -16,25 +16,27 @@ const Header = () => {
     setMenuVisible(false);
   }
 
-  const langIndex = useRef(0);
-  const cycleLangs = () => {
-    const langArr = ['es', 'en', 'uk'];
-    langIndex.current = langIndex.current < 2 ? langIndex.current + 1 : 0;
-    changeLanguage(langArr[langIndex.current]);
-  }
-
   return (
     <header className="
-      h-header-height bg-beige1 flex items-center text-2xl
+      h-header-height w-screen lg:min-w-[1192px] bg-beige1 flex items-center text-2xl
       text-[#3009] font-bold sticky top-0 z-50 shadow-sm"
     >
-        <Link to="/" className="absolute left-1/2 translate-x-[-50%] lg:left-8 lg:translate-x-0">Fabio Baquero</Link>
+        <Link
+          to="/"
+          className="absolute flex items-center gap-4 left-1/2 lg:left-8 translate-x-[-50%] lg:translate-x-0 text-sky-900"
+          style={{ fontFamily: 'Nova Square, serif' }}
+        >
+          <div className="w-14 h-14 overflow-hidden rounded-[50%]">
+            <img src="/assets/profilepic.webp" className="w-full -translate-y-8" />
+          </div>
+          <span className="text-sm lg:text-xl">FABIO BAQUERO</span>
+        </Link>
         <Burger  onClick={toggleMenuVisibility}/>
         <div className="hidden lg:flex absolute right-4 items-center gap-8">
             <Navbar />
-            <HeaderLangs cycleLangs={cycleLangs} />
+            <HeaderLangs />
         </div>
-        {menuVisible && <BurgerMenu toggleMenuVisibility={toggleMenuVisibility} onClickOutside={hideMenu} cycleLangs={cycleLangs}/>}
+        {menuVisible && <BurgerMenu toggleMenuVisibility={toggleMenuVisibility} onClickOutside={hideMenu}/>}
     </header>
   )
 }

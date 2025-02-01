@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import AllListArt from '../components/shared/AllListArt';
 import { useTranslation } from 'react-i18next';
 import { getDateArr } from '../utils/getDateArr';
-import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { getDateNumber } from '../utils/getDateNumber';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import AllListSortItem from '../components/shared/AllListSortItem';
 import { numberCallback, dateCallback, alphabeticalCallback, getCallbackIndex } from '../utils/sortCallbacks';
 import CoverTitle from '../components/shared/CoverTitle';
@@ -44,6 +45,8 @@ const AllListPage = () => {
     ]
 
     const sortCallbackIndex = getCallbackIndex(sort);
+    console.log(sortCallbacksArr[sortCallbackIndex]);
+    
 
     return (
     <>
@@ -84,15 +87,8 @@ const AllListPage = () => {
                                 paramOrder={order}
                                 changeSortOrder={changeSortOrder}
                             />
-                            <AllListSortItem
-                                label={t('common:alphabetical')}
-                                purposeSort={'alphabetical'}
-                                paramSort={sort}
-                                paramOrder={order}
-                                changeSortOrder={changeSortOrder}
-                            />
                         </div>
-                        {allArticles ? allArticles.sort(sortCallbacksArr[sortCallbackIndex]).map((art, index) => {
+                        {allArticles ? allArticles.sort(sortCallbacksArr[sortCallbackIndex](order)).map((art, index) => {
                             const dateArr = getDateArr(art.date);
 
                             return (
@@ -101,6 +97,8 @@ const AllListPage = () => {
                                     onClick={() => menuItemClick(art.category, art.slug)}
                                     title={t('articles:' + art.slug)}
                                     date={`${dateArr[0]} ${t('date:de')} ${t('date:' + dateArr[1])} ${dateArr[2]} ${t('date:poky')}`}
+                                    category={category}
+                                    views={art.views}
                                 />
                             )
                         }) : <p className="p-8 self-center text-2xl lg:text-4xl">{t('loadingArticles')}</p>}
@@ -113,11 +111,11 @@ const AllListPage = () => {
                         absolute inset-0 px-12 grid place-content-center z-10
                         bg-black bg-opacity-50 text-white"
                     >
-                        <p className='text-2xl lg:text-3xl font-thin text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas alias et, voluptate commodi assumenda laboriosam. Quos minima deleniti enim debitis?</p>
+                        <p className='text-2xl lg:text-3xl font-thin text-center'>{t('allListVerse')}</p>
                     </div>
                     <img
                         className='h-[110%]'
-                        src="/assets/studies-side-img.jpg"
+                        src="/assets/faith-of-centurion-side-img.jpeg"
                         alt="Image of the Bible"
                     />
                 </div>
