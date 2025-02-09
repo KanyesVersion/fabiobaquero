@@ -22,5 +22,6 @@
     "nameOfDonor": "El nombre del contribuyente (tal como aparece en el comprobante)",
     "cityAndCountry": "Ciudad y país de origen de la ofrenda",
     "onceReceived": "Una vez que reciba tu donación, te enviaré un correo electrónico y/o un WhatsApp para informarte y agradecerte por tu ofrenda.",
-    "thanksForSupporting": "¡Gracias por apoyar lo que hago!"
+    "thanksForSupporting": "¡Gracias por apoyar lo que hago!",
+    "globalTransfer": "Global Transfer"
 }

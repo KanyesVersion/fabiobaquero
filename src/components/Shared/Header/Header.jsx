@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="
       h-header-height w-screen lg:min-w-[1192px] bg-beige1 flex items-center text-2xl
-      text-[#3009] font-bold sticky top-0 z-50 shadow-sm"
+      text-[#3009] font-bold sticky top-0 left-0 z-50 shadow-sm"
     >
         <Link
           to="/"

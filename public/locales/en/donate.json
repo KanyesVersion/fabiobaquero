@@ -22,5 +22,6 @@
     "nameOfDonor": "Name of the supporter (as it appears on the voucher)",
     "cityAndCountry": "City and country of origin of the donation",
     "onceReceived": "Once I receive your donation, I will send you an e-mail and/or a WhatsApp to inform you and thank you for your support.",
-    "thanksForSupporting": "Thank you for supporting what I do!"
+    "thanksForSupporting": "Thank you for supporting what I do!",
+    "globalTransfer": "Global Transfer"
 }

@@ -30,7 +30,7 @@ const LatestCard = ({ bgColor, title, titleColor, big, small }) => {
                     <div className="h-[75%] w-full overflow-hidden">
                     <img className="w-full -translate-y-[10%]" src={big.img} alt="The Widow of Nain" />
                     </div>
-                    <div className="flex-1 grid place-content-center bg-slate-300 text-lg lg:text-xl">{big.title}</div>
+                    <div className="flex-1 grid place-content-center bg-slate-300 text-lg lg:text-xl text-center">{big.title}</div>
                 </Link>
                 {/* Small article */}
                 <Link
@@ -43,7 +43,7 @@ const LatestCard = ({ bgColor, title, titleColor, big, small }) => {
                     <div className="h-[75%] w-full overflow-hidden">
                     <img className="w-full -translate-y-[10%]" src={small.img} alt="The Widow of Nain" />
                     </div>
-                    <div className="flex-1 grid place-content-center bg-slate-300 text-sm lg:text-lg">{small.title}</div>
+                    <div className="flex-1 grid place-content-center bg-slate-300 text-sm lg:text-lg text-center">{small.title}</div>
                 </Link>
             </div>
         </div>

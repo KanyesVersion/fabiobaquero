@@ -12,6 +12,7 @@ a {
 
 body {
     @apply bg-beige1;
+    font-family: 'Outfit', 'Montserrat', 'Roboto', sans-serif;
 }
 
 body::-webkit-scrollbar {

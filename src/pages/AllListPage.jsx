@@ -39,14 +39,12 @@ const AllListPage = () => {
     }
 
     const sortCallbacksArr = [
-        dateCallback,
-        numberCallback,
-        alphabeticalCallback
+        dateCallback(order),
+        numberCallback(order),
+        alphabeticalCallback(order)
     ]
 
     const sortCallbackIndex = getCallbackIndex(sort);
-    console.log(sortCallbacksArr[sortCallbackIndex]);
-    
 
     return (
     <>
@@ -88,7 +86,7 @@ const AllListPage = () => {
                                 changeSortOrder={changeSortOrder}
                             />
                         </div>
-                        {allArticles ? allArticles.sort(sortCallbacksArr[sortCallbackIndex](order)).map((art, index) => {
+                        {allArticles ? allArticles.sort(sortCallbacksArr[sortCallbackIndex]).map((art, index) => {
                             const dateArr = getDateArr(art.date);
 
                             return (

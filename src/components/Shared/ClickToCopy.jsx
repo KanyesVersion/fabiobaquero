@@ -32,9 +32,9 @@ const ClickToCopy = ({ text }) => {
     return (
     <span
         className="
-            inline-flex bg-redbrown1 px-2 py-1 text-sm lg:text-xl
-            text-beige1 lg:hover:text-white
-            gap-2 items-center rounded-lg cursor-pointer -translate-y-1 select-none"
+            inline-flex bg-redbrown1 px-2 py-1
+            text-beige1 lg:hover:text-white text-sm lg:text-md
+            gap-2 items-center rounded-md cursor-pointer select-none"
         onClick={handleClick}
         ref={ref}
     >
